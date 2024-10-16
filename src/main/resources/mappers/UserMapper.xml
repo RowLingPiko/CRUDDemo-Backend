@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.voidtech.cruddemo.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="cn.voidtech.cruddemo.domain.UserEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="createTime" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="delete" jdbcType="TINYINT" property="delete"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        `id`, `nickname`, `email`, `password`, `createTime`, `updateTime`, `delete`
+    </sql>
+
+</mapper>

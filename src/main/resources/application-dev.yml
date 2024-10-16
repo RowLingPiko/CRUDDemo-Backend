@@ -1,0 +1,7 @@
+mybatis-flex:
+  datasource:
+    ds1:
+      type: druid
+      url: jdbc:mysql://localhost:3306/cruddemo?serverTimezone=GMT%2B8
+      username: root
+      password: 123456

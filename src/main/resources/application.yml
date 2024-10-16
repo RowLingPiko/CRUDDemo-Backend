@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: CRUDDemo
+  profiles:
+    active: dev
+  thymeleaf:
+    check-template-location: false
+logging:
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
+

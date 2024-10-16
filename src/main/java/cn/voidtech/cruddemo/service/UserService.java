@@ -16,4 +16,6 @@ public interface UserService extends IService<UserEntity> {
 
     RUtil updateUser(UserEntity userEntity);
 
+    RUtil clear();
+
 }

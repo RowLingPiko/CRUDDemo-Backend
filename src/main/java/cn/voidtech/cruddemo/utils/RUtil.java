@@ -1,6 +1,5 @@
 package cn.voidtech.cruddemo.utils;
 
-import cn.voidtech.cruddemo.domain.REnum;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,7 @@
 package cn.voidtech.cruddemo.config;
 
 import com.mybatisflex.core.FlexGlobalConfig;
+import com.mybatisflex.core.audit.AuditManager;
 import com.mybatisflex.spring.boot.MyBatisFlexCustomizer;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,6 +18,10 @@ import org.springframework.context.annotation.Configuration;
 public class MybatisFlexConfig implements MyBatisFlexCustomizer {
     @Override
     public void customize(FlexGlobalConfig flexGlobalConfig) {
+        AuditManager.setAuditEnable(false);
         flexGlobalConfig.setLogicDeleteColumn("delete");
     }
+
+
+
 }

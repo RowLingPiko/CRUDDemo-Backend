@@ -9,6 +9,7 @@ import cn.voidtech.cruddemo.utils.RUtil;
 import com.mybatisflex.core.paginate.Page;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.spring.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,8 @@ import static cn.voidtech.cruddemo.domain.table.UserEntityTableDef.USER_ENTITY;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> implements UserService {
+    @Autowired
+    private UserMapper userMapper;
 
     @Override
     @CacheEvict(allEntries = true)
@@ -147,5 +150,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
             return RUtil.ok();
         }
         return RUtil.fail();
+    }
+
+    @Override
+    public RUtil clear() {
+        try{
+            this.getUserMapper().clear();
+        }catch (Exception e){
+            return RUtil.fail();
+        }
+        return RUtil.ok();
+    }
+
+    public UserMapper getUserMapper() {
+        return userMapper;
     }
 }

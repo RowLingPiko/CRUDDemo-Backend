@@ -23,7 +23,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto implements Serializable {
+public class UserInsertDto implements Serializable {
     @NotBlank(message = "昵称不能为空")
     @Size(min = 2, max = 16, message = "昵称长度在2-16位之间")
     private String nickname;

@@ -1,4 +1,4 @@
-package cn.voidtech.cruddemo.domain;
+package cn.voidtech.cruddemo.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

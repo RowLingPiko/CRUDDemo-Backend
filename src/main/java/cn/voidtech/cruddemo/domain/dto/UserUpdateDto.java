@@ -29,7 +29,7 @@ public class UserUpdateDto implements Serializable {
     private Integer id;
 
     @NotBlank(message = "昵称不能为空")
-    @Size(min = 6, max = 16, message = "昵称长度在6-16位之间")
+    @Size(min = 2, max = 16, message = "昵称长度在6-16位之间")
     private String nickname;
 
     @NotBlank(message = "邮箱不能为空")
